@@ -2,6 +2,8 @@ import React from "react";
 import { db } from "~/server/db";
 import "~/styles/globals.css";
 
+export const dynamic = "force-dynamic"
+
 const mockUrls = [
   "https://utfs.io/f/85EdWt63zPThLkvcwtNchgD4Nb2I3qFs8rOYtk1CvV9Spmud",
   "https://utfs.io/f/85EdWt63zPThVY2NPQ5Zc1Ysv5tL7Jld8NFehS4uyWgEIPUm",
