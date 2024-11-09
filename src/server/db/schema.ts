@@ -4,6 +4,7 @@
 import { sql } from "drizzle-orm";
 import {
   index,
+  integer,
   pgTableCreator,
   serial,
   timestamp,
@@ -21,7 +22,7 @@ export const createTable = pgTableCreator((name) => `where-been_${name}`);
 export const images = createTable(
   "image",
   {
-    id: serial("id").primaryKey(),
+    id: integer("id").primaryKey(),
     name: varchar("name", { length: 256 }).notNull(),
     url: varchar("url", { length: 1024 }).notNull(),
     userId: varchar("user_id", { length: 256 }).notNull(),

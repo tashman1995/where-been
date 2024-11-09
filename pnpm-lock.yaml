@@ -40,7 +40,7 @@ importers:
         version: 2.1.1
       drizzle-orm:
         specifier: ^0.29.4
-        version: 0.29.5(@neondatabase/serverless@0.9.5)(@types/pg@8.11.6)(@types/react@18.3.12)(@vercel/postgres@0.7.2)(pg@8.13.1)(postgres@3.4.5)(react@18.2.0)
+        version: 0.29.5(@neondatabase/serverless@0.9.5)(@types/pg@8.11.10)(@types/react@18.3.12)(@vercel/postgres@0.7.2)(pg@8.13.1)(postgres@3.4.5)(react@18.2.0)
       lucide-react:
         specifier: ^0.364.0
         version: 0.364.0(react@18.2.0)
@@ -93,6 +93,9 @@ importers:
       '@types/node':
         specifier: ^20.11.20
         version: 20.17.6
+      '@types/pg':
+        specifier: ^8.11.10
+        version: 8.11.10
       '@types/react':
         specifier: ^18.2.57
         version: 18.3.12
@@ -106,7 +109,7 @@ importers:
         specifier: ^7.1.1
         version: 7.18.0(eslint@8.57.1)(typescript@5.6.3)
       drizzle-kit:
-        specifier: ^0.20.14
+        specifier: ^0.20.18
         version: 0.20.18
       eslint:
         specifier: ^8.57.0
@@ -769,6 +772,9 @@ packages:
 
   '@types/node@20.17.6':
     resolution: {integrity: sha512-VEI7OdvK2wP7XHnsuXbAJnEpEkF6NjSN45QJlL4VGqZSXsnicpesdTWsg9RISeSdYd3yeRj/y3k5KGjUXYnFwQ==}
+
+  '@types/pg@8.11.10':
+    resolution: {integrity: sha512-LczQUW4dbOQzsH2RQ5qoeJ6qJPdrcM/DcMLoqWQkMLMsq83J5lAX3LXjdkWdpscFy67JSOWDnh7Ny/sPFykmkg==}
 
   '@types/pg@8.11.6':
     resolution: {integrity: sha512-/2WmmBXHLsfRqzfHW7BNZ8SbYzE8OSk7i3WjFYvfgRHj7S1xj+16Je5fUKv3lVdVzk/zn9TXOqf+avFCFIE0yQ==}
@@ -3480,6 +3486,12 @@ snapshots:
     dependencies:
       undici-types: 6.19.8
 
+  '@types/pg@8.11.10':
+    dependencies:
+      '@types/node': 20.17.6
+      pg-protocol: 1.7.0
+      pg-types: 4.0.2
+
   '@types/pg@8.11.6':
     dependencies:
       '@types/node': 20.17.6
@@ -4029,10 +4041,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.29.5(@neondatabase/serverless@0.9.5)(@types/pg@8.11.6)(@types/react@18.3.12)(@vercel/postgres@0.7.2)(pg@8.13.1)(postgres@3.4.5)(react@18.2.0):
+  drizzle-orm@0.29.5(@neondatabase/serverless@0.9.5)(@types/pg@8.11.10)(@types/react@18.3.12)(@vercel/postgres@0.7.2)(pg@8.13.1)(postgres@3.4.5)(react@18.2.0):
     optionalDependencies:
       '@neondatabase/serverless': 0.9.5
-      '@types/pg': 8.11.6
+      '@types/pg': 8.11.10
       '@types/react': 18.3.12
       '@vercel/postgres': 0.7.2
       pg: 8.13.1
@@ -5188,8 +5200,7 @@ snapshots:
       define-properties: 1.2.1
       es-object-atoms: 1.0.0
 
-  obuf@1.1.2:
-    optional: true
+  obuf@1.1.2: {}
 
   once@1.4.0:
     dependencies:
@@ -5242,8 +5253,7 @@ snapshots:
 
   pg-int8@1.0.1: {}
 
-  pg-numeric@1.0.2:
-    optional: true
+  pg-numeric@1.0.2: {}
 
   pg-pool@3.7.0(pg@8.13.1):
     dependencies:
@@ -5268,7 +5278,6 @@ snapshots:
       postgres-date: 2.1.0
       postgres-interval: 3.0.0
       postgres-range: 1.1.4
-    optional: true
 
   pg@8.13.1:
     dependencies:
@@ -5341,30 +5350,25 @@ snapshots:
 
   postgres-array@2.0.0: {}
 
-  postgres-array@3.0.2:
-    optional: true
+  postgres-array@3.0.2: {}
 
   postgres-bytea@1.0.0: {}
 
   postgres-bytea@3.0.0:
     dependencies:
       obuf: 1.1.2
-    optional: true
 
   postgres-date@1.0.7: {}
 
-  postgres-date@2.1.0:
-    optional: true
+  postgres-date@2.1.0: {}
 
   postgres-interval@1.2.0:
     dependencies:
       xtend: 4.0.2
 
-  postgres-interval@3.0.0:
-    optional: true
+  postgres-interval@3.0.0: {}
 
-  postgres-range@1.1.4:
-    optional: true
+  postgres-range@1.1.4: {}
 
   postgres@3.4.5: {}
 
