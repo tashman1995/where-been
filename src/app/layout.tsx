@@ -1,8 +1,8 @@
+import "~/styles/globals.css";
+import "@uploadthing/react/styles.css";
 import React from "react";
 import { ClerkProvider } from "@clerk/nextjs";
-import "~/styles/globals.css";
 
-import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { TopNav } from "./_components/topnav";
 
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`font-sans ${GeistSans.variable} flex flex-col gap-4`}>
+        <body className={`flex flex-col gap-4 font-sans`}>
           <TopNav />
           {children}
         </body>
