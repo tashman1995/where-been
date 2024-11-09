@@ -18,18 +18,16 @@ import {
  */
 export const createTable = pgTableCreator((name) => `where-been_${name}`);
 
-export const image = createTable(
+export const images = createTable(
   "image",
   {
-    id: integer("id").primaryKey().generatedByDefaultAsIdentity(),
+    id: integer("id").primaryKey(),
     name: varchar("name", { length: 256 }).notNull(),
     url: varchar("url", { length: 1024 }).notNull(),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
-    updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
-      () => new Date(),
-    ),
+    updatedAt: timestamp("updated_at", { withTimezone: true }),
   },
   (example) => ({
     nameIndex: index("name_idx").on(example.name),
