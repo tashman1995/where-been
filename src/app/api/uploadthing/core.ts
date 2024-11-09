@@ -1,4 +1,5 @@
 import { auth } from "@clerk/nextjs/server";
+import { uuid } from "drizzle-orm/pg-core";
 import { createUploadthing, type FileRouter } from "uploadthing/next";
 import { UploadThingError } from "uploadthing/server";
 import { db } from "~/server/db";
@@ -26,7 +27,6 @@ export const ourFileRouter = {
       console.log("Upload complete for userId:", metadata.userId);
 
       await db.insert(images).values({
-        id: 13123123,
         name: file.name,
         url: file.url,
       });

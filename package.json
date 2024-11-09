@@ -26,6 +26,7 @@
     "lucide-react": "^0.364.0",
     "next": "^14.1.3",
     "next-themes": "^0.3.0",
+    "pg-core@latest": "link:drizzle-orm/pg-core@latest",
     "postgres": "^3.4.3",
     "posthog-js": "^1.116.6",
     "posthog-node": "^4.0.0",

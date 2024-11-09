@@ -50,6 +50,9 @@ importers:
       next-themes:
         specifier: ^0.3.0
         version: 0.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      pg-core@latest:
+        specifier: link:drizzle-orm/pg-core@latest
+        version: link:drizzle-orm/pg-core@latest
       postgres:
         specifier: ^3.4.3
         version: 3.4.5
