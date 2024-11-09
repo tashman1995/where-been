@@ -6,6 +6,7 @@ import {
   index,
   integer,
   pgTableCreator,
+  serial,
   timestamp,
   varchar,
 } from "drizzle-orm/pg-core";
@@ -18,12 +19,13 @@ import {
  */
 export const createTable = pgTableCreator((name) => `where-been_${name}`);
 
-export const image = createTable(
+export const images = createTable(
   "image",
   {
     id: integer("id").primaryKey(),
     name: varchar("name", { length: 256 }).notNull(),
     url: varchar("url", { length: 1024 }).notNull(),
+    userId: varchar("user_id", { length: 256 }).notNull(),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
