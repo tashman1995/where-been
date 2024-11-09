@@ -1,6 +1,6 @@
 import React from "react";
 import { db } from "~/server/db";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import "~/styles/globals.css";
 
 export const dynamic = "force-dynamic";
