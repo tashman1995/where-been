@@ -7,6 +7,7 @@ import { type Metadata } from "next";
 import { TopNav } from "./_components/topnav";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Where Been",
@@ -39,6 +40,7 @@ export default function RootLayout({ children, modal }: Readonly<RootLayoutProps
           </div>
           {modal}
           <div id="modal-root" />
+          <Toaster />
         </body>
       </html>
     </ClerkProvider>
