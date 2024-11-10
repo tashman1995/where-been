@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { UploadButton } from "~/utils/uploadthing";
+import LoadingSpinnerSVG from "./loading-spinner-svg";
 
 export function TopNav() {
   const router = useRouter();
@@ -21,7 +22,7 @@ export function TopNav() {
             toast.dismiss("upload-begin");
             toast("Image uploaded successfully");
           }} onUploadBegin={() => {
-            toast("Uploading image...", {
+            toast(<div className="flex align gap-3"><LoadingSpinnerSVG />Uploading image...</div>, {
               duration: 9000000,
               id: "upload-begin",
             });
