@@ -32,7 +32,7 @@ export default function RootLayout({ children, modal }: Readonly<RootLayoutProps
            */
           routerConfig={extractRouterConfig(ourFileRouter)}
         />
-        <body className={`font-sans`}>
+        <body className={`font-sans dark`}>
           <div className="grid h-screen grid-rows-[auto,1fr]">
             <TopNav />
             <main className="overflow-y-scroll">{children}</main>
