@@ -14,9 +14,12 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+interface RootLayoutProps {
+  children: React.ReactNode;
+  modal: React.ReactNode;
+}
+
+export default function RootLayout({ children, modal }: Readonly<RootLayoutProps>) {
   return (
     <ClerkProvider>
       <html lang="en">
@@ -32,6 +35,8 @@ export default function RootLayout({
         <body className={`flex flex-col gap-4 font-sans`}>
           <TopNav />
           {children}
+          {modal}
+          <div id="modal-root" />
         </body>
       </html>
     </ClerkProvider>
