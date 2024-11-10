@@ -29,7 +29,7 @@
     "next-themes": "^0.3.0",
     "pg-core@latest": "link:drizzle-orm/pg-core@latest",
     "postgres": "^3.4.3",
-    "posthog-js": "^1.116.6",
+    "posthog-js": "^1.181.0",
     "posthog-node": "^4.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
