@@ -1,20 +1,30 @@
 import React from "react";
-import { db } from "~/server/db";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import "~/styles/globals.css";
 import { getMyImages } from "~/server/db/queries";
+import Image from "next/image";
 
 export const dynamic = "force-dynamic";
 
 async function Images() {
   const images = await getMyImages();
 
-  return images.map((image) => (
-    <div key={image.id} className="w-48">
-      <img src={image.url} alt="Hello gallery" />
-      <div>{image.name}</div>
+  return (
+    <div className="flex flex-wrap justify-center gap-4">
+      {images.map((image) => (
+        <div key={image.id} className="h-48 w-48">
+          <Image
+            src={image.url}
+            style={{ objectFit: "contain" }}
+            width={192}
+            height={192}
+            alt={image.name}
+          />
+          <div>{image.name}</div>
+        </div>
+      ))}
     </div>
-  ));
+  );
 }
 
 export default async function HomePage() {

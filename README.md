@@ -38,9 +38,9 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 - [x] Actually setup a database (vercel postgres)
 - [x] Attach database to UI
 - [x] Add authentication (w/ clerk)
-- [ ] Add image upload
-- [ ] "taint (server only)
-- [ ] Use Next/Image component
+- [x] Add image upload
+- [x] "taint (server only)
+- [x] Use Next/Image component
 - [ ] Error management (w/ Sentry)
 - [ ] Routing/image page (parallel route)
 - [ ] Add image comments
@@ -51,3 +51,4 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 ## Useful links
 
 Strava and Clerk: https://www.youtube.com/watch?v=s3gglwSBSSk&ab_channel=PeterJausovec
+Strava Api: https://www.youtube.com/watch?v=sgscChKfGyg&list=PLO6KswO64zVvcRyk0G0MAzh5oKMLb6rTW&ab_channel=franchyze923
