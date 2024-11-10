@@ -47,3 +47,7 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 - [ ] Delete button (w/ Server Actions)
 - [ ] Analytics (posthog)
 - [ ] Rate limiting (upstash)
+
+## Useful links
+
+Strava and Clerk: https://www.youtube.com/watch?v=s3gglwSBSSk&ab_channel=PeterJausovec

@@ -2,13 +2,12 @@ import React from "react";
 import { db } from "~/server/db";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import "~/styles/globals.css";
+import { getMyImages } from "~/server/db/queries";
 
 export const dynamic = "force-dynamic";
 
 async function Images() {
-  const images = await db.query.images.findMany({
-    orderBy: (model, { desc }) => desc(model.id),
-  });
+  const images = await getMyImages();
 
   return images.map((image) => (
     <div key={image.id} className="w-48">
