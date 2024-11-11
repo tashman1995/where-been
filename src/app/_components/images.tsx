@@ -1,6 +1,6 @@
-import { getMyImages } from "~/server/db/queries";
 import Image from "next/image";
 import Link from "next/link";
+import { getMyImages } from "~/server/queries";
 
 export default async function Images() {
   const images = await getMyImages();
