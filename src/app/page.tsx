@@ -2,10 +2,12 @@ import React from "react";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import "~/styles/globals.css";
 import Images from "./_components/images";
+import Activities from "./_components/activities";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
+  
   return (
     <main className="">
       <div className="flex flex-wrap gap-4">
@@ -16,6 +18,7 @@ export default async function HomePage() {
         </SignedOut>
         <SignedIn>
           <Images />
+          <Activities />
         </SignedIn>
       </div>
     </main>
