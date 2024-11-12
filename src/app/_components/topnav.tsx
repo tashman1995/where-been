@@ -40,6 +40,11 @@ export function TopNav() {
                 },
               );
             }}
+            onUploadError={() => {
+              posthog.capture("upload_error");
+              toast.dismiss("upload-begin");
+              toast("Error uploading image");
+            }}
           />
           <UserButton />
         </SignedIn>

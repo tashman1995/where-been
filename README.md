@@ -44,9 +44,8 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 - [x] Error management (w/ Sentry)
 - [x] Routing/image page (parallel route)
 - [x] Analytics (posthog)
-- [ ] Add image comments
-- [ ] Delete button (w/ Server Actions)
-- [ ] Rate limiting (upstash)
+- [x] Delete button (w/ Server Actions)
+- [x] Rate limiting (upstash)
 
 ## Useful links
 
