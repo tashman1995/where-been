@@ -1,4 +1,4 @@
-import { ratelimit } from "./../../../server/ratelimit";
+import { ratelimit } from "~/server/ratelimit";
 import { auth } from "@clerk/nextjs/server";
 import { createUploadthing, type FileRouter } from "uploadthing/next";
 import { UploadThingError } from "uploadthing/server";
